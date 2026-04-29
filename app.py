@@ -8,7 +8,7 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 from flask_bcrypt import Bcrypt
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.urandom(24)
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-key-9876543210')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///deutschai.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
