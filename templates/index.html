@@ -27,29 +27,7 @@
 </head>
 <body class="bg-white font-display text-slate-900 antialiased selection:bg-primary/20 selection:text-primary">
 <div class="relative flex min-h-screen flex-col overflow-x-hidden">
-<header class="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/90 backdrop-blur-md">
-<div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-<div class="flex items-center gap-2">
-<div class="flex items-center justify-center size-8 rounded-lg bg-primary text-white">
-<span class="material-symbols-outlined text-[20px]">translate</span>
-</div>
-<span class="text-xl font-bold tracking-tight text-slate-900">DeutschAI</span>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors" href="#">Features</a>
-<a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors" href="#">Methodology</a>
-<a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors" href="#">Pricing</a>
-</nav>
-<div class="flex items-center gap-4">
-<button class="hidden sm:flex text-sm font-bold text-slate-700 hover:text-primary transition-colors" onclick="window.location.href='/login'">
-                    Log In
-                </button>
-<button class="flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-white hover:bg-red-600 transition-all shadow-md hover:shadow-lg shadow-primary/20" onclick="window.location.href='/signup'">
-                    Get Started
-                </button>
-</div>
-</div>
-</header>
+{% include 'includes/header.html' %}
 <main class="flex-grow">
 <section class="relative overflow-hidden bg-surface py-16 sm:py-24 lg:py-32">
 <div class="absolute inset-0 -z-10 opacity-30">

@@ -67,46 +67,7 @@
 </head>
 
 <body class="bg-background text-text-main font-display min-h-screen flex flex-col antialiased">
-    <header class="bg-surface border-b border-border-color sticky top-0 z-40">
-        <div class="max-w-[1600px] mx-auto px-4 lg:px-8 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="size-8 text-primary">
-                    <svg class="w-full h-full" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                        <path clip-rule="evenodd"
-                            d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
-                            fill="currentColor" fill-rule="evenodd"></path>
-                    </svg>
-                </div>
-                <h2 class="text-text-main text-lg font-bold tracking-tight">DeutschAI</h2>
-            </div>
-            <nav class="hidden md:flex items-center gap-1">
-                <a class="text-text-secondary hover:text-text-main hover:bg-slate-50 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                    href="/dashboard">Dashboard</a>
-                <a class="text-text-secondary hover:text-text-main hover:bg-slate-50 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                    href="/lessons">Lektionen</a>
-                <a class="text-text-secondary hover:text-text-main hover:bg-slate-50 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                    href="/chat">Chat</a>
-                <a class="text-text-secondary hover:text-text-main hover:bg-slate-50 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                    href="/practice">Practice</a>
-                <a class="text-text-secondary hover:text-text-main hover:bg-slate-50 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                    href="/vocabulary">Vocabulary</a>
-                <a class="text-primary bg-red-50 px-4 py-2 rounded-lg text-sm font-bold transition-colors"
-                    href="/setting">Profile</a>
-                <a class="text-text-secondary hover:text-text-main hover:bg-slate-50 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                    href="/logout">Logout</a>
-            </nav>
-            <div class="flex items-center gap-3">
-                <button
-                    class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border-color bg-white text-text-secondary text-xs font-semibold hover:border-slate-300 transition-colors">
-                    <span class="w-2 h-2 rounded-full bg-green-500"></span>
-                    {{ user.german_level }} Intermediate
-                </button>
-                <div class="bg-center bg-no-repeat bg-cover rounded-full size-9 ring-2 ring-slate-100 cursor-pointer"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA8Ve1qe81BbDxBdlrWNCBUsF_ZbcYhyO3uuW8uPmnt8E-Eew2VFpKgALG5_1r_eBijKnBPUcVsmZsSOBklst3vdSgDkeL-gVZvNSTvuem6hqdl7ecV3mwm8JkXXocIPU6ge7dzCAEeOPUsRbCStWmZTUWbcVDJL_f2tAa-ZYWB8bbgZJ7kqm4KpimSvaIZx6t4tezAemk_RM_KEMjsoHIPTmQ_Rmfw4Mqu69plhgsvv5KGEmDHCpYCcVKYrsP9gg3g-uRo2MHBzG4");'>
-                </div>
-            </div>
-        </div>
-    </header>
+    {% include 'includes/header.html' %}
     <main class="flex-1 flex flex-col lg:flex-row w-full max-w-[1600px] mx-auto p-4 lg:p-8 gap-8">
         <form method="POST" action="{{ url_for('setting') }}" class="w-full max-w-4xl mx-auto flex flex-col gap-6">
             <div class="w-full max-w-4xl mx-auto flex flex-col gap-6">

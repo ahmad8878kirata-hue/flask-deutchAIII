@@ -64,45 +64,7 @@
 </head>
 
 <body class="bg-background text-text-main font-display min-h-screen flex flex-col antialiased">
-    <header class="bg-surface border-b border-border-color sticky top-0 z-40">
-        <div class="max-w-[1600px] mx-auto px-4 lg:px-8 h-18 py-4 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <a href="/" class="flex items-center gap-3">
-                    <div class="size-8 text-primary">
-                        <svg class="w-full h-full" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                            <path clip-rule="evenodd"
-                                d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
-                                fill="currentColor" fill-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <span class="text-text-main text-lg font-bold tracking-tight">DeutschAI</span>
-                </a>
-            </div>
-            <nav class="hidden md:flex items-center gap-1">
-                <a class="text-text-secondary hover:text-text-main hover:bg-slate-50 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                    href="/dashboard">Dashboard</a>
-                <a class="text-text-secondary hover:text-text-main hover:bg-slate-50 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                    href="/lessons">Lektionen</a>
-                <a class="text-text-secondary hover:text-text-main hover:bg-slate-50 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                    href="/chat">Chat</a>
-                <a class="text-text-secondary hover:text-text-main hover:bg-slate-50 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                    href="/practice">Übung</a>
-                <a class="text-primary bg-red-50 px-4 py-2 rounded-lg text-sm font-bold transition-colors"
-                    href="/vocabulary">Wortschatz</a>
-                <a class="text-text-secondary hover:text-text-main hover:bg-slate-50 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                    href="/setting">Profil</a>
-                <a class="text-text-secondary hover:text-text-main hover:bg-slate-50 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                    href="/logout">Abmelden</a>
-            </nav>
-            <div class="flex items-center gap-3">
-                <div
-                    class="hidden sm:flex items-center gap-1.5 px-4 py-2 rounded-full border border-border-color bg-white text-primary text-xs font-bold shadow-sm">
-                    <span class="size-2 rounded-full bg-primary animate-pulse"></span>
-                    {{ user.german_level }}
-                </div>
-            </div>
-        </div>
-    </header>
+    {% include 'includes/header.html' %}
 
     <main class="flex-1 w-full max-w-[1200px] mx-auto p-4 lg:p-8">
         <section class="flex flex-col gap-8 w-full">
