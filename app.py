@@ -196,7 +196,7 @@ def explain_lesson():
     lesson_id = data.get('lesson_id')
     lesson = Lesson.query.get_or_404(lesson_id)
     
-    api_key = "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"
+    api_key = "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"
     
     prompt = f"""
     Der Schüler lernt gerade die Lektion: "{lesson.title}".
@@ -245,7 +245,7 @@ def generate_lesson():
     topic = data.get('topic')
     level = data.get('level', current_user.german_level)
     
-    api_key = "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"
+    api_key = "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"
     
     prompt = f"""
     Erstelle eine wissenschaftlich fundierte und umfassende Deutsch-Lektion zum Thema "{topic}" für das Niveau {level} (nach GER-Standard).
@@ -383,7 +383,7 @@ def chat_api():
     4. Interaktion: Beende jede Antwort mit einer Anschlussfrage, die zum Niveau {current_user.german_level} passt.
     """
 
-    api_key = "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"
+    api_key = "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"
     messages = [{"role": "system", "content": system_content}]
     messages.extend(formatted_history)
 
@@ -425,7 +425,7 @@ def practice_api():
     if not user_text:
         return jsonify({"error": "No text provided"}), 400
 
-    api_key = "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"
+    api_key = "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"
     level_description = CEFR_DESCRIPTIONS.get(current_user.german_level, "Allgemeiner GER-Standard")
     
     system_prompt = f"""
